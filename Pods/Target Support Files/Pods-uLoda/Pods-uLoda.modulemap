@@ -1,0 +1,6 @@
+framework module Pods_uLoda {
+  umbrella header "Pods-uLoda-umbrella.h"
+
+  export *
+  module * { export * }
+}

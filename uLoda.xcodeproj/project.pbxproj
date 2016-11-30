@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9392871A9350FCD520685FBE /* Pods_uLoda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F1FC10F407A24E6047AF19 /* Pods_uLoda.framework */; };
 		D78049DF1DEE9BBE00DB0E77 /* uLoda.h in Headers */ = {isa = PBXBuildFile; fileRef = D78049DD1DEE9BBE00DB0E77 /* uLoda.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D78049E61DEE9ECB00DB0E77 /* LDDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78049E51DEE9ECB00DB0E77 /* LDDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		640C40E73B8EED41F17FA36B /* Pods-uLoda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLoda.release.xcconfig"; path = "Pods/Target Support Files/Pods-uLoda/Pods-uLoda.release.xcconfig"; sourceTree = "<group>"; };
+		82F1FC10F407A24E6047AF19 /* Pods_uLoda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uLoda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78049DA1DEE9BBE00DB0E77 /* uLoda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = uLoda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78049DD1DEE9BBE00DB0E77 /* uLoda.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uLoda.h; sourceTree = "<group>"; };
 		D78049DE1DEE9BBE00DB0E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D78049E51DEE9ECB00DB0E77 /* LDDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDDictionary.swift; sourceTree = "<group>"; };
+		DC24C98A3C3485926B0843EA /* Pods-uLoda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uLoda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uLoda/Pods-uLoda.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9392871A9350FCD520685FBE /* Pods_uLoda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68E8C6CBED352F77D7934734 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC24C98A3C3485926B0843EA /* Pods-uLoda.debug.xcconfig */,
+				640C40E73B8EED41F17FA36B /* Pods-uLoda.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5BE33195629248F4BB280D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82F1FC10F407A24E6047AF19 /* Pods_uLoda.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D78049D01DEE9BBE00DB0E77 = {
 			isa = PBXGroup;
 			children = (
 				D78049DC1DEE9BBE00DB0E77 /* uLoda */,
 				D78049DB1DEE9BBE00DB0E77 /* Products */,
+				68E8C6CBED352F77D7934734 /* Pods */,
+				D5BE33195629248F4BB280D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,6 +74,7 @@
 			children = (
 				D78049DD1DEE9BBE00DB0E77 /* uLoda.h */,
 				D78049DE1DEE9BBE00DB0E77 /* Info.plist */,
+				D78049E51DEE9ECB00DB0E77 /* LDDictionary.swift */,
 			);
 			path = uLoda;
 			sourceTree = "<group>";
@@ -70,10 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D78049E21DEE9BBE00DB0E77 /* Build configuration list for PBXNativeTarget "uLoda" */;
 			buildPhases = (
+				E84D245B7D65CD7ECAC4ED95 /* [CP] Check Pods Manifest.lock */,
 				D78049D51DEE9BBE00DB0E77 /* Sources */,
 				D78049D61DEE9BBE00DB0E77 /* Frameworks */,
 				D78049D71DEE9BBE00DB0E77 /* Headers */,
 				D78049D81DEE9BBE00DB0E77 /* Resources */,
+				A75C668274DD59421EEEA763 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +125,7 @@
 					D78049D91DEE9BBE00DB0E77 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = A3R4KF72W5;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,11 +157,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A75C668274DD59421EEEA763 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-uLoda/Pods-uLoda-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E84D245B7D65CD7ECAC4ED95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D78049D51DEE9BBE00DB0E77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78049E61DEE9ECB00DB0E77 /* LDDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +303,9 @@
 		};
 		D78049E31DEE9BBE00DB0E77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC24C98A3C3485926B0843EA /* Pods-uLoda.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A3R4KF72W5;
@@ -252,13 +318,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shorsher.uLoda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D78049E41DEE9BBE00DB0E77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 640C40E73B8EED41F17FA36B /* Pods-uLoda.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A3R4KF72W5;
@@ -294,6 +363,7 @@
 				D78049E41DEE9BBE00DB0E77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
