@@ -300,6 +300,7 @@
 				D768F68A1DEFF523006F1F78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
