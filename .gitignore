@@ -21,6 +21,9 @@ xcuserdata/
 *.moved-aside
 *.xcuserstate
 
+# CocoaPods
+Pods/
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
