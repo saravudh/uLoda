@@ -10,19 +10,19 @@ import UIKit
 import uLoda
 
 class ViewController: UIViewController, UISearchBarDelegate {
+    @IBOutlet weak var mWebView: UIWebView!
     @IBOutlet weak var mSearchBar: UISearchBar!
-    @IBOutlet weak var mTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mSearchBar.delegate = self
-        mTextView.text = ""
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        mTextView.text = mSearchBar.text
-        MLEng2Thai.search(word: "", completion: {(result: String, isSuccess: Bool) in
-            print("")
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        MLEng2Thai.search(word: mSearchBar.text!, completion: {(result: String, isSuccess: Bool) in
+            self.mWebView.loadHTMLString(result, baseURL: nil)
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         })
     }
 }
