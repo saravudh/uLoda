@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import uLoda
 
 class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var mSearchBar: UISearchBar!
@@ -20,6 +21,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         mTextView.text = mSearchBar.text
+        MLEng2Thai.search(word: "", completion: {(result: String, isSuccess: Bool) in
+            print("")
+        })
     }
 }
 
